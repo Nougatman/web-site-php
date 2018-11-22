@@ -14,7 +14,10 @@
   <body>
     <h1 align="center">Компания Междугородние Перевозки</h1>
     <?php
-      $query = "SELECT * FROM `traffics`";
+      $query = "SELECT * FROM (((traffics INNER JOIN customers ON traffics.customers = customers.id_customers)
+        INNER JOIN shipments ON traffics.shipment = shipments.id_shipments)
+        INNER JOIN trucks ON traffics.truck = trucks.id_trucks)
+        INNER JOIN cities ON traffics.city = cities.id_cities";
       $res = mysqli_query($link, $query);
       ?>
     <table align="center" bordercolor="aqua" border="1" width="50%">
@@ -28,8 +31,8 @@
     </tr>
     <?php
       while ($row = mysqli_fetch_array($res)){
-        echo '<tr><td>'.$row['id_traffics'].'</td><td>'.$row['customers'].'</td><td>'.$row['shipment'].'</td>
-        <td>'.$row['truck'].'</td><td>'.$row['city'].'</td><td>'.$row['delivery_date'].'</td>';
+        echo '<tr><td>'.$row['id_traffics'].'</td><td>'.$row['FIO_customer'].'</td><td>'.$row['shipment_info'].'</td>
+        <td>'.$row['statenumber'].'</td><td>'.$row['name_city'].'</td><td>'.$row['delivery_date'].'</td>';
       }
     ?>
 </table>
