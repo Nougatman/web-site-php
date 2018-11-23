@@ -9,33 +9,20 @@
 <html>
   <head>
     <title>Главная страница сайта</title>
-      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1 align="center">Компания Междугородние Перевозки</h1>
-    <?php
-      $query = "SELECT * FROM (((traffics INNER JOIN customers ON traffics.customers = customers.id_customers)
-        INNER JOIN shipments ON traffics.shipment = shipments.id_shipments)
-        INNER JOIN trucks ON traffics.truck = trucks.id_trucks)
-        INNER JOIN cities ON traffics.city = cities.id_cities";
-      $res = mysqli_query($link, $query);
-      ?>
-    <table align="center" bordercolor="aqua" border="1" width="50%">
-    <tr>
-      <td align="center">ID перевозки</td>
-      <td align="center">Клиент</td>
-      <td align="center">Груз</td>
-      <td align="center">Грузовик</td>
-      <td align="center">Город доставки</td>
-      <td align="center">Дата доставки</td>
-    </tr>
-    <?php
-      while ($row = mysqli_fetch_array($res)){
-        echo '<tr><td>'.$row['id_traffics'].'</td><td>'.$row['FIO_customer'].'</td><td>'.$row['shipment_info'].'</td>
-        <td>'.$row['statenumber'].'</td><td>'.$row['name_city'].'</td><td>'.$row['delivery_date'].'</td>';
-      }
-    ?>
+    <h1 align="center">Компания Fast Carrier</h1>
+    <h2 align="center" style="color:aqua">Осуществляем грузоперевозки между следующими городами:</h2> 
+      <p align="center" style="color:white">Уфа, Ижевск, Казань, Ишимбай, Стерлитамак,
+      Нефтекамск, Нижнекамск, Санкт-Петербург, Москва, Псков, Ульяновск, Альметьевск, Тольятти,
+      Нижний Новгород, Самара, Оренбург, Екатеринбург, Киров, Сызрань, Ростов, Саратов,
+      Ростов-на-Дону, Мурманск, Братск, Тверь, Тамбов, Барнаул, Владивосток, Красноярск</p>
 </table>
+    <img src="../main.jpg" width="30%" border="2"/>
+    <img src="../main2.jpg" width="30%" border="2"/>
+    <img src="../main3.jpg" width="482pt" border="2"/>
+    <a href="../tables_main.php" align="center" title="Перейти на страницу">
+      <h2><font color="white">Таблицы</font></h2></a>
   </body>
 </html>
-

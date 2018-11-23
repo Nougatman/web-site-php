@@ -4,3 +4,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 12pt;
 };
+.center-img {
+    text-align: center;
+}
