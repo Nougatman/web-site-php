@@ -17,24 +17,25 @@
       $query = "SELECT * FROM trucks";
       $res = mysqli_query($link, $query);
       ?>
-    <table align="center" bordercolor="aqua" border="1" width="90%" bgcolor="#040a14" style="color:azure">
+    <table align="center" bordercolor="aqua" border="1" width="100%" bgcolor="#040a14" style="color:azure">
     <tr>
       <td align="center">ID</td>
       <td align="center">Автотранспорт</td>
       <td align="center">Госномер</td>
-      <td align="center">Грузоподъёмность</td>
+      <td align="center">Грузоподъёмность (т.)</td>
       <td align="center">ФИО водителя</td>
       <td align="center">Телефон</td>
-      <td align="center">Длина грузового отсека</td>
-      <td align="center">Высота</td>
-      <td align="center">Ширина</td>
+      <td align="center">Длина грузового отсека (м.)</td>
+      <td align="center">Высота (м.)</td>
+      <td align="center">Ширина (м.)</td>
+      <td align="center">Грузчики</td>
       <td align="center">Стоимость услуг(Х руб./час)</td>
     </tr>
     <?php
       while ($row = mysqli_fetch_array($res)){
         echo '<tr><td>'.$row['id_trucks'].'</td><td>'.$row['truck_model'].'</td><td>'.$row['statenumber'].
         '</td><td>'.$row['carrying'].'</td><td>'.$row['FIO_driver'].'</td><td>'.$row['phone'].'</td><td>'.$row['lenght'].
-        '</td><td>'.$row['height'].'</td><td>'.$row['width'].'</td><td>'.$row['price'].'</td>';
+        '</td><td>'.$row['height'].'</td><td>'.$row['width'].'</td><td>'.$row['loader'].'</td><td>'.$row['price'].'</td>';
       }
     ?>
 </table>
