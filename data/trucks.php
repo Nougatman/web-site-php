@@ -37,12 +37,39 @@
         '</td><td>'.$row['carrying'].'</td><td>'.$row['FIO_driver'].'</td><td>'.$row['phone'].'</td><td>'.$row['lenght'].
         '</td><td>'.$row['height'].'</td><td>'.$row['width'].'</td><td>'.$row['loader'].'</td><td>'.$row['price'].'</td>';
       }
+      $query = "SELECT * FROM trucks";
+      $res = mysqli_query($link, $query);
     ?>
-</table>
-    <a href="../tables_main.php" align="center" title="Перейти на страницу">
-        <h2><font color="white">Таблицы</font></h2></a>
-    <a href="../main.php" align="center" title="Перейти на страницу">
-        <h2><font color="aqua">Главная сайта</font></h2></a>
+    </table>
+    <?php
+      if(isset($_POST['add'])){
+        header("Location:trucks_add.php");
+      }
+      else if (isset($_POST['delete'])){
+      $query = "DELETE FROM trucks WHERE id_trucks = {$_POST['truck']}";
+      $res = mysqli_query($link, $query);
+      header("Location:trucks.php");
+      }
+    ?>
+    <form method="POST">
+      <p align="center"><input type="submit" name="add" value="Добавить запись" /></p>
+      <p align="center">
+      <select name="truck">
+        <option>Выберите транспорт (грузовик)</option>
+        <?php 
+          while ($row = mysqli_fetch_array($res)){
+        ?>
+          <option value=<?php echo $row['id_trucks']?>><?php echo $row['id_trucks'].' - '.$row['truck_model']?></option>
+        <?php
+          }
+        ?>
+      </select></p>
+      <p align="center"><input type="submit" name="delete" value="Удалить запись" /></p>
+    </form>
+    <p><a href="../tables_main.php" title="Перейти на страницу">
+        <h2 align="center"><font color="white">Таблицы</font></h2></a></p>
+    <p><a href="../main.php" title="Перейти на страницу">
+        <h2 align="center"><font color="aqua">Главная сайта</font></h2></a></p>
   </body>
 </html>
 

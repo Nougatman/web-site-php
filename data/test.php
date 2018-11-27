@@ -7,6 +7,10 @@
         echo 'Кнопка нажата!';
     }
 ?>
+<select>
+    <option>1</option>
+    <option>2</option>
+    </select>
 <form method="POST">
     <input type="submit" name="nazvanie_knopki" value="Нажмите" />
 </form>

@@ -14,7 +14,7 @@
   <body>
     <h1 align="center">Раздел запросов к БД</h1>
 
-    <a href="../main.php" align="center" title="Перейти на страницу">
-        <h2><font color="#0088b2">Главная сайта</font></h2></a>
+    <p><a href="../main.php" title="Перейти на страницу">
+        <h2 align="center"><font color="#0088b2">Главная сайта</font></h2></a></p>
   </body>
 </html>

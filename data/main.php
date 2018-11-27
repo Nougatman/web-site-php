@@ -22,9 +22,9 @@
     <img src="../main.jpg" width="30%" border="2"/>
     <img src="../main2.jpg" width="30%" border="2"/>
     <img src="../main3.jpg" width="482pt" border="2"/>
-    <a href="../tables_main.php" align="center" title="Перейти на страницу">
-      <h2><font color="white">Таблицы</font></h2></a>
-    <a href="../requests.php" align="center" title="Перейти на страницу">
-      <h2><font color="white">Запросы</font></h2></a>
+    <p><a href="../tables_main.php" title="Перейти на страницу">
+      <h2 align="center"><font color="white">Таблицы</font></h2></a></p>
+    <p><a href="../requests.php" title="Перейти на страницу">
+      <h2 align="center"><font color="white">Запросы</font></h2></a></p>
   </body>
 </html>

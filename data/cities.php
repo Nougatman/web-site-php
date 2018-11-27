@@ -26,20 +26,38 @@
       while ($row = mysqli_fetch_array($res)){
         echo '<tr><td>'.$row['id_cities'].'</td><td>'.$row['name_city'].'</td>';
       }
+      $query = "SELECT * FROM cities";
+      $res = mysqli_query($link, $query);
     ?>
     </table>
     <?php
       if(isset($_POST['add'])){
         header("Location:cities_add.php");
       }
+      else if (isset($_POST['delete'])){
+      $query = "DELETE FROM cities WHERE id_cities = {$_POST['city']}";
+      $res = mysqli_query($link, $query);
+      header("Location:cities.php");
+      }
     ?>
     <form method="POST">
       <p align="center"><input type="submit" name="add" value="Добавить запись" /></p>
+      <p align="center">
+      <select name="city">
+        <option>Выберите город</option>
+        <?php 
+          while ($row = mysqli_fetch_array($res)){
+        ?>
+          <option value=<?php echo $row['id_cities']?>><?php echo $row['id_cities'].' - '.$row['name_city']?></option>
+        <?php
+          }
+        ?>
+      </select></p>
+      <p align="center"><input type="submit" name="delete" value="Удалить запись" /></p>
     </form>
-    <a href="../tables_main.php" align="center" title="Перейти на страницу">
-        <h2><font color="white">Таблицы</font></h2></a>
-    <a href="../main.php" align="center" title="Перейти на страницу">
-        <h2><font color="aqua">Главная сайта</font></h2></a>
+    <p><a href="../tables_main.php" title="Перейти на страницу">
+        <h2 align="center"><font color="white">Таблицы</font></h2></a></p>
+    <p><a href="../main.php" title="Перейти на страницу">
+        <h2 align="center"><font color="aqua">Главная сайта</font></h2></a></p>
   </body>
 </html>
-

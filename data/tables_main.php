@@ -13,18 +13,18 @@
   </head>
   <body>
     <h1 align="center">Раздел таблицы</h1>
-    <a href="../traffics.php" align="center" title="Перейти на страницу">
-        <h2><font color="white">Заказы</font></h2></a>
-    <a href="../cities.php" align="center" title="Перейти на страницу">
-        <h2><font color="white">Города</font></h2></a>
-    <a href="../customers.php" align="center" title="Перейти на страницу">
-        <h2><font color="white">Клиенты</font></h2></a>
-    <a href="../shipments.php" align="center" title="Перейти на страницу">
-        <h2><font color="white">Грузы</font></h2></a>
-    <a href="../trucks.php" align="center" title="Перейти на страницу">
-        <h2><font color="white">Автотранспорт</font></h2></a>
+    <p><a href="../traffics.php" title="Перейти на страницу">
+        <h2 align="center"><font color="white">Заказы</font></h2></a></p>
+    <p><a href="../cities.php" title="Перейти на страницу">
+        <h2 align="center"><font color="white">Города</font></h2></a></p>
+    <p><a href="../customers.php" title="Перейти на страницу">
+        <h2 align="center"><font color="white">Клиенты</font></h2></a></p>
+    <p><a href="../shipments.php" title="Перейти на страницу">
+        <h2 align="center"><font color="white">Грузы</font></h2></a></p>
+    <p><a href="../trucks.php" title="Перейти на страницу">
+        <h2 align="center"><font color="white">Автотранспорт</font></h2></a></p>
 
-        <a href="../main.php" align="center" title="Перейти на страницу">
-        <h2><font color="#0088b2">Главная сайта</font></h2></a>
+    <p><a href="../main.php" title="Перейти на страницу">
+        <h2 align="center"><font color="#0088b2">Главная сайта</font></h2></a></p>
   </body>
 </html>

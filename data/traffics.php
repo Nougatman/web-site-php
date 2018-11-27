@@ -36,11 +36,11 @@
         '</td><td>'.$row['FIO_driver'].'</td><td>'.$row['statenumber'].'</td><td>'.$row['name_city'].'</td><td>'.$row['delivery_date'].'</td>';
       }
     ?>
-</table>
-    <a href="../tables_main.php" align="center" title="Перейти на страницу">
-        <h2><font color="white">Таблицы</font></h2></a>
-    <a href="../main.php" align="center" title="Перейти на страницу">
-        <h2><font color="aqua">Главная сайта</font></h2></a>
+    </table>
+    <p><a href="../tables_main.php" title="Перейти на страницу">
+        <h2 align="center"><font color="white">Таблицы</font></h2></a></p>
+    <p><a href="../main.php" title="Перейти на страницу">
+        <h2 align="center"><font color="aqua">Главная сайта</font></h2></a></p>
   </body>
 </html>
 
