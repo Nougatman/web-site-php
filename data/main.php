@@ -24,5 +24,7 @@
     <img src="../main3.jpg" width="482pt" border="2"/>
     <a href="../tables_main.php" align="center" title="Перейти на страницу">
       <h2><font color="white">Таблицы</font></h2></a>
+    <a href="../requests.php" align="center" title="Перейти на страницу">
+      <h2><font color="white">Запросы</font></h2></a>
   </body>
 </html>

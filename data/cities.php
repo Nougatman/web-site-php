@@ -16,7 +16,7 @@
     <?php
       $query = "SELECT * FROM cities";
       $res = mysqli_query($link, $query);
-      ?>
+    ?>
     <table align="center" bordercolor="aqua" border="1" width="25%" bgcolor="#040a14" style="color:azure">
     <tr>
       <td align="center">ID</td>
@@ -27,7 +27,15 @@
         echo '<tr><td>'.$row['id_cities'].'</td><td>'.$row['name_city'].'</td>';
       }
     ?>
-</table>
+    </table>
+    <?php
+      if(isset($_POST['add'])){
+        header("Location:cities_add.php");
+      }
+    ?>
+    <form method="POST">
+      <p align="center"><input type="submit" name="add" value="Добавить запись" /></p>
+    </form>
     <a href="../tables_main.php" align="center" title="Перейти на страницу">
         <h2><font color="white">Таблицы</font></h2></a>
     <a href="../main.php" align="center" title="Перейти на страницу">
