@@ -16,6 +16,7 @@
     <form method="POST">
       <p style="color:aqua" align="center">Город <input type="text" name="city" value=""/></p>
       <p align="center"><input type="submit" name="add" value="Добавить запись" /></p>
+      <p align="center"><input type="submit" name="cancel" value="Отмена" /></p>
     </form>
     <?php
       if (isset($_POST['add'])){
@@ -32,6 +33,9 @@
         }
       }
       else echo "<p align='center' style='color:white'>Введены некорректные данные. Повторите ввод.</p>";
+    }
+    if (isset($_POST['cancel'])){
+        header("Location:cities.php");
     }
     ?>
   </body>
