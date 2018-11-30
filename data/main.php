@@ -13,15 +13,11 @@
   </head>
   <body>
     <h1 align="center">Компания Fast Carrier</h1>
-    <h2 align="center" style="color:aqua">Осуществляем грузоперевозки между следующими городами:</h2> 
-      <p align="center" style="color:white">Уфа, Ижевск, Казань, Ишимбай, Стерлитамак,
-      Нефтекамск, Нижнекамск, Санкт-Петербург, Москва, Псков, Ульяновск, Альметьевск, Тольятти,
-      Нижний Новгород, Самара, Оренбург, Екатеринбург, Киров, Сызрань, Ростов, Саратов,
-      Ростов-на-Дону, Мурманск, Братск, Тверь, Тамбов, Барнаул, Владивосток, Красноярск</p>
+    <h2 align="center" style="color:aqua">Осуществляем междугородние грузоперевозки</h2> 
 </table>
-    <img src="../main.jpg" width="30%" border="2"/>
+    <p align="center"><img src="../main.jpg" width="30%" border="2"/>
     <img src="../main2.jpg" width="30%" border="2"/>
-    <img src="../main3.jpg" width="482pt" border="2"/>
+    <img src="../main3.jpg" width="482pt" border="2"/></p>
     <p><a href="../tables_main.php" title="Перейти на страницу">
       <h2 align="center"><font color="white">Таблицы</font></h2></a></p>
     <p><a href="../requests.php" title="Перейти на страницу">
